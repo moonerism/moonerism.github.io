@@ -1,13 +1,20 @@
 //Переменные комнат
 //beentopreproom = true;
-//Переменные предметов
+
+
+//ИНВЕНТАРЬ
 sword = false;
-//Текущая комната
+axe = false;
+//
+
+//ТЕКУЩАЯ КОМНАТА
 currentroom = "preproom";
+//
+
 
 $(document).ready(function() {
 
-  $("#console").fadeIn(2000);
+  $("#game_field").fadeIn(2000);
 
   $("form").submit(function() {
     var input = $("#command_line").val();
@@ -46,7 +53,7 @@ $(document).ready(function() {
       check();
     }
 
-    if (input == "в зал ожидания" && currentroom == "arena") {
+    if (input == "идти в зал ожидания" && currentroom == "arena") {
       currentroom = "preproom";
       $("<p>Ты вернулся в Зал Ожидания.</p>").hide().insertBefore("#placeholder").fadeIn(1000);
       check();

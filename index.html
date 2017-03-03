@@ -1,30 +1,44 @@
 <html>
 <head>
  <script type="text/javascript" src="scripts/jquery.js"></script>
- <link rel=stylesheet href="style.css" type="text/css" />
+ <script type="text/javascript" src="scripts/game.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
  <meta http-equiv="content-type" content="text/html" charset="utf-8" />
  <title>Тестовая боевая игра</title>
 </head>
 
 <body>
- <div id="console">
-  <p id="message_startgame">Добро пожаловать в Яму Испытаний. Здесь ты, искатель приключений, будешь биться за свою жизнь и несметные сокровища! Удачи!</p>
-  <p id="area_preproom">Сейчас ты в Зале Ожидания. Ты можешь набраться сил после битвы или поменять экипировку. На стойке оружия расположены: МЕЧ.</p>
-  <p id="message_help" style="display: none;">Список команд: ВЗЯТЬ, ОТДЫХ, ...</p>
 
-<!--
-ДО ЭТОЙ СТРОКИ БУДЕТ ВСТАВЛЕН КОНТЕНТ
--->
 
- <div id="placeholder"></div>
+  <div class="game_field">
+   <p id="message_startgame">Добро пожаловать в Яму Испытаний. Здесь ты, искатель приключений, будешь биться за свою жизнь и несметные сокровища! Удачи!</p>
+   <p id="area_preproom">Сейчас ты в Зале Ожидания. Ты можешь набраться сил после битвы или поменять экипировку. На стойке оружия расположены: МЕЧ.</p>
+   <p id="message_help" style="display: none;">Список команд: ВЗЯТЬ, ИДТИ В, ...</p>
 
- <form onsubmit="return false;">
-  <input type="text" size="50" autofocus="autofocus" id="command_line" />
- </form>
 
+   <!--ВСТАВКА-->
+   <div id="placeholder"></div>
+
+
+   <!--ПОЛЕ ВВОДА-->
+    <div class="game_input">
+    <form onsubmit="return false;">
+     <input type="text" size="50" autofocus="autofocus" id="command_line" />
+    </form>
+ </div>
  </div>
 
- <script type="text/javascript" src="scripts/game.js"></script>
+ <div class="game_menu">
+  <h3>Инвентарь:</h3>
+  <p>Зелье здоровья [3]</p>
+  <h3>Экипировка:</h3>
+  <p>Шлем</p>
+  <h3>Статус:</h3>
+  <p>Здоров</p>
+</div>
+
+
+
 
 
 
